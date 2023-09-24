@@ -5,13 +5,17 @@
         <h2>Welcome <%= locals.name?name:"User" %></h2>
         <h3>CHOOSE YOUR PLACE</h3>
     </div>
-        <div class="con">
+        <div class="container">
+            <div class="row">
                 <% pro.forEach(function(pro){ %>
-                <ul class="con1">
-                    <li class="imag"><img src="<%= pro.imgurl %>" alt=""></li>
-                    <li class="txt"><h2><%= pro.name %></h2></li>
-                    <% }); %>
-                </ul>
+                <div class="col">
+                    <ul class="con1">
+                        <li class="imag"><img src="<%= pro.imgurl %>" alt=""></li>
+                        <li class="txt"><h2><%= pro.name %></h2></li>
+                    </ul>
+                </div>
+                <% }); %>
+            </div>
         </div>    
     <div class="frm">  
         <form action="/signout">
